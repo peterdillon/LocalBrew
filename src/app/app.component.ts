@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Spinkit } from 'ng-http-loader';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'LocalBrew';
+  spinnerStyle = Spinkit;
+  public spinnerComponent = SpinnerComponent;
 }

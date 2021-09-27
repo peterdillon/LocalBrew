@@ -1,0 +1,31 @@
+.ct {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    width: 5rem;
+	span {
+        color: white;
+        font-family: 'CoreCircus', sans-serif;
+        letter-spacing: -3px;
+		font-size: 1rem;
+		text-transform: uppercase;
+		text-align: center;
+		display: block;
+		margin-top: 10px;
+	}
+	svg {
+		transform-origin: 50% 100%;
+		animation: wink 1s infinite;
+		display: block;
+	}
+}
+
+@keyframes wink {
+	0%   { transform: rotate(5deg);  }
+	50%  { transform: rotate(-5deg); }
+	100% { transform: rotate(5deg);  }
+}
+// ---------------------------------------
+// ---------------------------------------
+// ---------------------------------------

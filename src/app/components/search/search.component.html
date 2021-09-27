@@ -1,0 +1,37 @@
+<h3>Search By Name Or City:</h3>
+
+<div class="p-inputgroup">
+    <!-- (input)="currentInput=$event.target.value" -->
+    <input (keyup)="checkKeyPress($event, query.value)" name="query" #query id="query" autocomplete="off" type="text" pInputText>
+    <button (click)="searchByQuery(query.value)" type="button" pButton pRipple label="Search"></button>
+</div>
+
+<p class="error" *ngIf="hasError">No breweries found for that search.</p>
+
+<div *ngIf="showResults">
+    <div class="pagination">
+        <div class="menu-item"><h3>Results: Page {{ pageNumber }}</h3></div>
+        <div class="menu-item "><button class="no-rt-bor" (click)="prevPage(query.value)" [disabled]="isPrevDisabled">Previous</button></div>
+        <div class="menu-item"><button (click)="nextPage(query.value)" [disabled]="isNextDisabled">Next</button></div>
+    </div>
+    <p-table [value]="Breweries" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th class="last">Map</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-brewery>
+            <tr>
+                <td>
+                    <span *ngIf="brewery.website_url"><a href="{{ brewery.website_url }}" target="_blank">{{ brewery.name }}</a></span>
+                    <span *ngIf="!brewery.website_url">{{ brewery.name }}</span>
+                </td>
+                <td>{{ brewery.city }}</td>
+                <td class="last"><a href="https://www.google.com/maps/search/?api=1&query={{ brewery.latitude }},{{ brewery.longitude }}" target="_blank"><span class="pi pi-external-link"></span></a></td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <p class="error" *ngIf="noMoreBreweries">No more breweries.</p>
+</div>

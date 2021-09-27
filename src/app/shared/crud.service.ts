@@ -20,11 +20,10 @@ export class CrudService {
   // REST API
   // endpoint = 'http://localhost:3000';
   // endpoint = 'https://jsonplaceholder.typicode.com';
+
   endpoint = 'https://api.openbrewerydb.org';
   city = '?by_city=Stevens';
   page = '?page=2';
-
-
 
   constructor(private httpClient: HttpClient) { }
 
@@ -42,8 +41,6 @@ export class CrudService {
     )
   }
 
-  // https://api.openbrewerydb.org/breweries/search?query=sad&per_page=5
-  
   getBreweryByPage(query: any, pageNumber: any): Observable<Brewery> {
     return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&page=' + pageNumber + '&per_page=5')
     .pipe(
@@ -76,38 +73,6 @@ export class CrudService {
   //     catchError(this.processError)
   //   )
   // }
-
-//   getSingleUser(id): Observable<User> {
-//     return this.httpClient.get<User>(this.endpoint + '/users/' + id)
-//     .pipe(
-//       retry(1),
-//       catchError(this.processError)
-//     )
-//   }  
-
-//   addUser(data): Observable<User> {
-//     return this.httpClient.post<User>(this.endpoint + '/users', JSON.stringify(data), this.httpHeader)
-//     .pipe(
-//       retry(1),
-//       catchError(this.processError)
-//     )
-//   }  
-
-//   updateUser(id, data): Observable<User> {
-//     return this.httpClient.put<User>(this.endpoint + '/users/' + id, JSON.stringify(data), this.httpHeader)
-//     .pipe(
-//       retry(1),
-//       catchError(this.processError)
-//     )
-//   }
-
-//   deleteUser(id){
-//     return this.httpClient.delete<User>(this.endpoint + '/users/' + id, this.httpHeader)
-//     .pipe(
-//       retry(1),
-//       catchError(this.processError)
-//     )
-//   }
 
   processError(err: any) {
      let message = '';

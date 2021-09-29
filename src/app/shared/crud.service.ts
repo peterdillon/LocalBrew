@@ -22,8 +22,6 @@ export class CrudService {
   // endpoint = 'https://jsonplaceholder.typicode.com';
 
   endpoint = 'https://api.openbrewerydb.org';
-  city = '?by_city=Stevens';
-  page = '?page=2';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -49,7 +47,6 @@ export class CrudService {
     )
   }
 
-//https://api.openbrewerydb.org/breweries/search?query=hello
   getBreweryByQuery(query: any): Observable<Brewery> {
     return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&per_page=5')
     .pipe(

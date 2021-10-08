@@ -369,13 +369,24 @@ html, body {
     }
   }
 
+  .position-ct {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(255,255,255,20%);
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
   .gettingPosition {
-    float: right;
-    animation: moveAndOpacity 5s ease infinite;
+    float: center;
+    left: calc(50% + 3rem);
+    animation: moveAndOpacity 7s ease-in-out infinite;
     transform: translate3d(0, 0, 0);
   }
   @keyframes moveAndOpacity {
-    0%   { transform: translateX(0); }
+    0%   { transform: translateX(3rem); }
     50%  { transform: translateX(-3rem); }
-    100%   { transform: translateX(0); }
+    100%   { transform: translateX(3rem); }
   }

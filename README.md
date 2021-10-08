@@ -1,5 +1,14 @@
 # LocalBrew
 
+Using the https://www.openbrewerydb.org/ database endpoints to createa a unique UI for searching local breweries.
+
+I am using:
+- primeng
+- @ng-web-apis/geolocation
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
 
 ## Development server

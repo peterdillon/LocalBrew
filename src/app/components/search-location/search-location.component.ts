@@ -19,18 +19,20 @@ export class SearchLocationComponent implements OnInit  {
   noMoreBreweries: boolean = false;
   latitude: number = 0;
   longitude: number = 0;
+  gettingGeoLocation: boolean = true;
 
   constructor( 
     public crudService: CrudService,
     private readonly geolocation$: GeolocationService ) {}
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.geolocation$.pipe(take(1)).subscribe(position => 
       { this.getByLocation(position.coords.latitude, position.coords.longitude, this.pageNumber),
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
-        console.log(position.coords.latitude, position.coords.longitude) });
-
+        console.log(position.coords.latitude, position.coords.longitude);
+        this.gettingGeoLocation = false; 
+      });
   }
 
   prevPage() {

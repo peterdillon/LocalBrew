@@ -380,13 +380,10 @@ html, body {
     }
   }
   .gettingPosition {
-    float: center;
-    left: calc(50% + 3rem);
-    animation: moveAndOpacity 7s ease-in-out infinite;
-    transform: translate3d(0, 0, 0);
+    animation: moveAndOpacity 6s ease-in-out infinite;
   }
   @keyframes moveAndOpacity {
-    0%   { transform: translateX(3rem); }
-    50%  { transform: translateX(-3rem); }
-    100%   { transform: translateX(3rem); }
+    0%   { transform: translateX(2rem); }
+    50%  { transform: translateX(-2rem); }
+    100%   { transform: translateX(2rem); }
   }

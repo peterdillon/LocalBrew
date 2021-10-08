@@ -84,10 +84,10 @@ $letter-spacing: -.75rem;
 }
 
 .error {letter-spacing: -.1rem;}
-td.last, th.last { text-align: center !important; }
+td.last, th.last { text-align: center !important; letter-spacing: -.1rem;}
 #spinner { background-color: $green !important;}
 a { color: mix($green,black,50%); }
-h1, h3, p, span, label {
+h1, h3, p, label {
     color: whitesmoke;
     font-family: 'CoreCircus', Arial, Helvetica, sans-serif;
 }

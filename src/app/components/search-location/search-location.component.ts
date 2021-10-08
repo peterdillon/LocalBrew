@@ -30,7 +30,6 @@ export class SearchLocationComponent implements OnInit  {
       { this.getByLocation(position.coords.latitude, position.coords.longitude, this.pageNumber),
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
-        console.log(position.coords.latitude, position.coords.longitude);
         this.gettingGeoLocation = false; 
       });
   }
@@ -59,7 +58,6 @@ export class SearchLocationComponent implements OnInit  {
   getByLocation(latitude: any, longitude: any, pageNumber: any) {
     return this.crudService.getBreweryByLocation(latitude, longitude, pageNumber).subscribe((res: {}) => {
       this.Breweries = res;
-      console.log(this.Breweries);
       if (this.Breweries?.length) {
         this.hasError = false;
         this.showResults = true;

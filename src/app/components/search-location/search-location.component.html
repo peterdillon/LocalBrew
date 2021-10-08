@@ -1,7 +1,7 @@
 <h3>Search By GeoLocation:</h3>
 
 <p class="error" *ngIf="hasError">No breweries found for that search.</p>
-<span class="error gettingPosition" *ngIf="gettingGeoLocation">Getting GeoLocation.</span>
+<p class="error gettingPosition" *ngIf="gettingGeoLocation">Getting GeoLocation.</p>
 
 <div *ngIf="showResults">
     <div class="pagination">

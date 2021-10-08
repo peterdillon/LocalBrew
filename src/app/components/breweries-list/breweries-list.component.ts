@@ -22,7 +22,6 @@ export class BreweriesListComponent implements OnInit {
   fetchUsers() {
     return this.crudService.getBreweries().subscribe((res: {}) => {
       this.Breweries = res;
-      console.log(this.Breweries);
     })
   }
 

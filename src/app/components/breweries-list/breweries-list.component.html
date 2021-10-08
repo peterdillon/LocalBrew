@@ -2,14 +2,19 @@
 <p-table [value]="Breweries" responsiveLayout="scroll">
     <ng-template pTemplate="header">
         <tr>
-            <th scope="col">Name</th>
-            <th scope="col">City</th>
+            <th>Name</th>
+            <th>City</th>
+            <th class="last">Map</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-brewery>
         <tr>
-            <td>{{brewery.name}}</td>
-            <td>{{brewery.city}}</td>
+            <td>
+                <span *ngIf="brewery.website_url"><a href="{{ brewery.website_url }}" target="_blank">{{ brewery.name }}</a></span>
+                <span *ngIf="!brewery.website_url">{{ brewery.name }}</span>
+            </td>
+            <td>{{ brewery.city }}</td>
+            <td class="last"><a href="https://www.google.com/maps/search/?api=1&query={{ brewery.latitude }},{{ brewery.longitude }}" target="_blank"><span class="pi pi-external-link"></span></a></td>
         </tr>
     </ng-template>
 </p-table>

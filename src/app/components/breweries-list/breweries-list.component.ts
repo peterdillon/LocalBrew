@@ -7,7 +7,7 @@ import { CrudService } from "../../shared/crud.service";
   styleUrls: ['./breweries-list.component.scss']
 })
 
-export class UsersListComponent implements OnInit {
+export class BreweriesListComponent implements OnInit {
 
   Breweries: any = [];
 
@@ -25,13 +25,5 @@ export class UsersListComponent implements OnInit {
       console.log(this.Breweries);
     })
   }
-
-  // delete(id) {
-  //   if (window.confirm('Really?')){
-  //     this.crudService.deleteUser(id).subscribe(res => {
-  //       this.fetchUsers()
-  //     })
-  //   }
-  // }
 
 }

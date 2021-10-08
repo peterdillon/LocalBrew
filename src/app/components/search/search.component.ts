@@ -11,7 +11,6 @@ export class SearchComponent implements OnInit  {
   Breweries: any = [];
   pageNumber: number = 1;
   city: string = '';
-  cityTmp: string = '';
   query: string = '';
   isNextDisabled: boolean = false;
   isPrevDisabled: boolean = true;

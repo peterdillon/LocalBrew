@@ -11,16 +11,18 @@ import { TableModule } from 'primeng/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersListComponent } from './components/breweries-list/breweries-list.component';
+import { BreweriesListComponent } from './components/breweries-list/breweries-list.component';
 import { SearchComponent } from './components/search/search.component';
+import { SearchLocationComponent } from './components/search-location/search-location.component';
 import { HomeComponent } from './components/home/home.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersListComponent,
+    BreweriesListComponent,
     SearchComponent,
+    SearchLocationComponent,
     HomeComponent
   ],
   imports: [

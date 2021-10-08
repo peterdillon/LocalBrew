@@ -1,17 +1,12 @@
-<h3>Search By Name Or City:</h3>
-
-<div class="p-inputgroup">
-    <input (keyup)="checkKeyPress($event, query.value)" name="query" #query id="query" autocomplete="off" type="text" pInputText>
-    <button (click)="searchByQuery(query.value)" type="button" pButton pRipple label="Search"></button>
-</div>
+<h3>Search By GeoLocation:</h3>
 
 <p class="error" *ngIf="hasError">No breweries found for that search.</p>
 
 <div *ngIf="showResults">
     <div class="pagination">
         <div class="menu-item"><h3>Results: Page {{ pageNumber }}</h3></div>
-        <div class="menu-item "><button class="no-rt-bor" (click)="prevPage(query.value)" [disabled]="isPrevDisabled">Previous</button></div>
-        <div class="menu-item"><button (click)="nextPage(query.value)" [disabled]="isNextDisabled">Next</button></div>
+        <div class="menu-item "><button class="no-rt-bor" (click)="prevPage()" [disabled]="isPrevDisabled">Previous</button></div>
+        <div class="menu-item"><button (click)="nextPage()" [disabled]="isNextDisabled">Next</button></div>
     </div>
     <p-table [value]="Breweries" responsiveLayout="scroll">
         <ng-template pTemplate="header">

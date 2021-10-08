@@ -144,12 +144,13 @@ h3 {
         flex-direction: column;
         align-content: center;
         flex-grow: 1;
-        min-width: 33.333%;
+        min-width: 25%;
+        text-overflow: ellipsis;
         text-align: center;
         cursor: pointer;
-        &:nth-child(2) {
-          border-left: 1px solid mix($green,black,50%);;
-          border-right: 1px solid mix($green,black,50%);;
+        border-right: 1px solid mix($green,black,50%);
+      &:last-of-type {
+        border-right: transparent;
       }
       button {
         all: unset;

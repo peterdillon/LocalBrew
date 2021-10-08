@@ -55,6 +55,14 @@ export class CrudService {
     )
   }
 
+  getBreweryByLocation(latitude: any, longitude: any, pageNumber: any): Observable<Brewery> {
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/?by_dist=' + latitude + ',' + longitude + '&page=' + pageNumber + '&per_page=5')
+    .pipe(
+      retry(1),
+      catchError(this.processError)
+    )
+  }
+
   // getBreweryByPage(query: any): Observable<Brewery> {
   //   return this.httpClient.get<Brewery>(this.endpoint + '/breweries/' + query + '&per_page=5')
   //   .pipe(

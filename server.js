@@ -5,10 +5,10 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/local-brew'));
+app.use(express.static('./dist/LocalBrew/'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/local-brew/'}),
+    res.sendFile('index.html', {root: 'dist/LocalBrew/'}),
 );
 
 // Start the app by listening on the default Heroku port

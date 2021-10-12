@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve concurrently \"json-server --watch db.json\" \"live-server\"",
+    "start": "node app.js",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

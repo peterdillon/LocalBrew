@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve concurrently \"json-server --watch db.json\" \"live-server\"",
-    "build": "ng build --prod",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

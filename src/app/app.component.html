@@ -6,10 +6,10 @@
 
 <div class="page-container">
   <div class="menu">
-    <div class="menu-item"><a href="#" [routerLink]="['/home']">Home</a></div>
-    <div class="menu-item"><a href="#" [routerLink]="['/search']">Search</a></div>
-    <div class="menu-item"><a href="#" [routerLink]="['/search-location']">Location</a></div>
-    <div class="menu-item"><a href="#" [routerLink]="['/list']">All Breweries</a></div>
+    <div class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="#" [routerLink]="['/home']">Home</a></div>
+    <div class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="#" [routerLink]="['/search']">Search</a></div>
+    <div class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="#" [routerLink]="['/search-location']">Location</a></div>
+    <div class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a href="#" [routerLink]="['/list']">All</a></div>
   </div>
   <router-outlet></router-outlet>
 </div>

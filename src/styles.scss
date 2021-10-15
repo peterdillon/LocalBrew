@@ -163,7 +163,8 @@ h3 {
             @media screen and (max-width: 900px) {
                 letter-spacing: -3px;
                 line-height: 1;
-                padding: 1rem .25rem;
+                padding: 1rem .15rem;
+                font-size: .9rem;
             }
             &:hover { background-color: rgba(255,255,255,.2); }
             text-decoration: none;

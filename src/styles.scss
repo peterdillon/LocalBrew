@@ -159,7 +159,7 @@ h3 {
           cursor: not-allowed;
         }
       }
-        a, button {
+        a, a:visited, a:link, button {
             @media screen and (max-width: 900px) {
                 letter-spacing: -3px;
                 line-height: 1;
@@ -206,7 +206,7 @@ html, body {
     .bubble,
     .small-bubbles,
     .drip {
-      background: white;
+      background-color: white;
     }
     
     .bubble,
@@ -218,7 +218,7 @@ html, body {
     position: relative;
     width: 20vmin;
     height: 32vmin;
-    background: #EEF5F8;
+    background-color: #EEF5F8;
     border-radius: 2vmin;
   }
   .mug:before, .mug:after {
@@ -232,7 +232,7 @@ html, body {
     width: 15vmin;
     height: 17vmin;
     border-radius: 19%;
-    background: #EEF5F8;
+    background-color: #EEF5F8;
   }
   .mug:after {
     z-index: -1;
@@ -240,7 +240,7 @@ html, body {
     height: 13vmin;
     top: 8vmin;
     left: 13vmin;
-    background: #C499AF;
+    background-color: #C499AF;
     border-radius: 19%;
   }
   
@@ -249,13 +249,13 @@ html, body {
     left: 2vmin;
     width: 16vmin;
     height: 28vmin;
-    background: #FFD36D;
+    background-color: #FFD36D;
     border-radius: 1vmin;
   }
   .beer:before, .beer:after {
     position: absolute;
     content: "";
-    background: white;
+    background-color: white;
     border-radius: 100%;
   }
   .beer:before {
@@ -287,7 +287,7 @@ html, body {
   .bubble:before, .bubble:after {
     position: absolute;
     content: "";
-    background: white;
+    background-color: white;
     border-radius: 100%;
   }
   .bubble:before {
@@ -313,7 +313,7 @@ html, body {
     position: absolute;
     content: "";
     border-radius: 100%;
-    background: white;
+    background-color: white;
   }
   .small-bubbles:before {
     width: 3vmin;

@@ -262,7 +262,7 @@ html, body {
     border-radius: 100%;
   }
   .beer:before {
-    animation: 4s up infinite;
+    animation: 4.5s up infinite;
     // animation-delay: 2s;
     width: 1.5vmin;
     height: 1.5vmin;
@@ -271,7 +271,7 @@ html, body {
     box-shadow: 7vmin -15vmin 0 white, 4vmin -10vmin 0 white, 6vmin -3vmin 0 white;
   }
   .beer:after {
-    animation: 3s up infinite;
+    animation: 3.5s up infinite;
     opacity: 0;
     animation-delay: 1s;
     width: 1.5vmin;
@@ -347,7 +347,8 @@ html, body {
       opacity: 0;
     }
     20% {
-        opacity: 1;
+      transform: translateY(0px);
+      opacity: 1;
     }
     80% {
         opacity: 1;

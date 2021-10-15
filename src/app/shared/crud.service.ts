@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { retry, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -70,22 +69,6 @@ export class CrudService {
       catchError(this.processError)
     )
   }
-
-  // getBreweryByPage(query: any): Observable<Brewery> {
-  //   return this.httpClient.get<Brewery>(this.endpoint + '/breweries/' + query + '&per_page=5')
-  //   .pipe(
-  //     retry(1),
-  //     catchError(this.processError)
-  //   )
-  // }
-
-  // getBreweryByCity(city: any): Observable<Brewery> {
-  //   return this.httpClient.get<Brewery>(this.endpoint + '/breweries/' + city)
-  //   .pipe(
-  //     retry(1),
-  //     catchError(this.processError)
-  //   )
-  // }
 
   processError(err: any) {
      let message = '';

@@ -3,7 +3,8 @@
 <p class="error" *ngIf="hasError">No breweries found for that search.</p>
  
 <div class="position-ct" *ngIf="gettingGeoLocation">
-    <p class="gettingPosition">Getting GeoLocation</p>
+    <p class="gettingPosition" *ngIf="!locationError">Getting GeoLocation</p>
+    <p class="gettingPosition" *ngIf="locationError">Error getting location, please check device location.</p>
 </div>
 
 <div *ngIf="showResults">

@@ -32,7 +32,7 @@ export class CrudService {
   }  
 
   getBreweries(): Observable<Brewery> {
-    return this.httpClient.get<Brewery>(this.endpoint + '/breweries')
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries?per_page=5')
     .pipe(
       retry(1),
       catchError(this.processError)
@@ -41,6 +41,14 @@ export class CrudService {
 
   getBreweryByPage(query: any, pageNumber: any): Observable<Brewery> {
     return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&page=' + pageNumber + '&per_page=5')
+    .pipe(
+      retry(1),
+      catchError(this.processError)
+    )
+  }
+
+  getBreweryByPageOnly(pageNumber: any): Observable<Brewery> {
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries?&page=' + pageNumber + '&per_page=5')
     .pipe(
       retry(1),
       catchError(this.processError)

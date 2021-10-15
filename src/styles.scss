@@ -119,10 +119,11 @@ h3 {
       display: block;
       color: mix($green,black,50%);
       font-family: 'CoreCircus', Arial, Helvetica, sans-serif;
+      font-size: .9rem;
       &:hover { background-color: rgba(255,255,255,.2); }
       &:disabled {
         &:hover { background-color: transparent }
-        color: #ccc;
+        color: rgba(#624d58,.4);
         cursor: not-allowed;
       }
       &.no-rt-bor {  
@@ -159,12 +160,13 @@ h3 {
           cursor: not-allowed;
         }
       }
-        a, a:visited, a:link, button {
+       & > a, a:visited, a:link, button {
             @media screen and (max-width: 900px) {
                 letter-spacing: -3px;
                 line-height: 1;
                 padding: 1rem .15rem;
                 font-size: .9rem;
+                color: white;
             }
             &:hover { background-color: rgba(255,255,255,.2); }
             text-decoration: none;

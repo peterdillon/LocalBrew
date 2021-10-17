@@ -31,7 +31,7 @@ export class BreweriesListComponent implements OnInit {
   prevPage() {
     if (this.pageNumber > 0) {
       this.pageNumber = this.pageNumber - 1;
-      this.searchByPage(this.pageNumber);
+      this.paginationQuery(this.pageNumber);
       this.noMoreBreweries = false;
       this.isNextDisabled = false;
     } else {
@@ -41,10 +41,10 @@ export class BreweriesListComponent implements OnInit {
 
   nextPage() {
     this.pageNumber = this.pageNumber + 1;
-    this.searchByPage(this.pageNumber);
+    this.paginationQuery(this.pageNumber);
   }
 
-  searchByPage(pageNumber:number) {
+  paginationQuery(pageNumber:number) {
     this.fetchByPage(pageNumber);
   }
 

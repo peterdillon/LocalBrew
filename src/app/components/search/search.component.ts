@@ -28,7 +28,7 @@ export class SearchComponent implements OnInit  {
   prevPage(val: string) {
     if (this.pageNumber > 0) {
       this.pageNumber = this.pageNumber - 1;
-      this.searchByPage(val, this.pageNumber);
+      this.paginationQuery(val, this.pageNumber);
       this.noMoreBreweries = false;
       this.isNextDisabled = false;
     } else {
@@ -38,7 +38,7 @@ export class SearchComponent implements OnInit  {
 
   nextPage(val: string) {
     this.pageNumber = this.pageNumber + 1;
-    this.searchByPage(val, this.pageNumber);
+    this.paginationQuery(val, this.pageNumber);
   }
 
   checkKeyInput(e: any, val: string) {
@@ -49,7 +49,7 @@ export class SearchComponent implements OnInit  {
   searchByQuery(val:string) {
     this.fetchByQuery(val);
   }
-  searchByPage(val:string, pageNumber:number) {
+  paginationQuery(val:string, pageNumber:number) {
     this.fetchByPage(val, pageNumber);
   }
 

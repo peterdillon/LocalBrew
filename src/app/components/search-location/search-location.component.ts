@@ -44,7 +44,7 @@ export class SearchLocationComponent implements OnInit  {
   prevPage() {
     if (this.pageNumber > 0) {
       this.pageNumber = this.pageNumber - 1;
-      this.searchByPage(this.latitude, this.longitude, this.pageNumber);
+      this.paginationQuery(this.latitude, this.longitude, this.pageNumber);
       this.noMoreBreweries = false;
       this.isNextDisabled = false;
     } else {
@@ -57,7 +57,7 @@ export class SearchLocationComponent implements OnInit  {
     this.getByLocation(this.latitude, this.longitude, this.pageNumber);
   }
 
-  searchByPage(latitude: any, longitude: any, pageNumber: number) {
+  paginationQuery(latitude: any, longitude: any, pageNumber: number) {
     this.getByLocation(this.latitude, this.longitude, this.pageNumber);
   }
 

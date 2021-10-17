@@ -43,16 +43,8 @@ export class SearchComponent implements OnInit  {
 
   checkKeyInput(e: any, val: string) {
     const x = this.utils.checkKeyPress(e, val);
-    if(x) {
-      this.searchByQuery(val);
-    } 
+    if(x) { this.searchByQuery(val); } 
   }
-
-  // checkKeyPress(e: any, val: string) {
-  //   if (e.keyCode === 13) {
-  //     this.searchByQuery(val);
-  //   }
-  // }
 
   searchByQuery(val:string) {
     this.fetchByQuery(val);
@@ -94,19 +86,5 @@ export class SearchComponent implements OnInit  {
       
     })
   }
-
-  // fetchByCity(city: string) {
-  //   return this.crudService.getBreweryByCity(city).subscribe((res: {}) => {
-  //     this.Breweries = res;
-  //     if (this.Breweries?.length) {
-  //       this.hasError = false;
-  //       this.showResults = true;
-  //     } else {
-  //       this.hasError = true;
-  //       this.showResults = false;
-  //     }
-      
-  //   })
-  // }
 
 }

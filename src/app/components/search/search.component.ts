@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CrudService } from "../../shared/crud.service";
+import { Utils } from '../../shared/utils';
 
 @Component({
   selector: 'app-search',
@@ -19,7 +20,8 @@ export class SearchComponent implements OnInit  {
   noMoreBreweries: boolean = false;
   resultsTotal: number = 0;
 
-  constructor( public crudService: CrudService ) {}
+  constructor( public crudService: CrudService,
+               private utils: Utils ) {}
 
   ngOnInit(): void { }
 
@@ -39,11 +41,18 @@ export class SearchComponent implements OnInit  {
     this.searchByPage(val, this.pageNumber);
   }
 
-  checkKeyPress(e: any, val: string) {
-    if (e.keyCode === 13) {
+  checkKeyInput(e: any, val: string) {
+    const x = this.utils.checkKeyPress(e, val);
+    if(x) {
       this.searchByQuery(val);
-    }
+    } 
   }
+
+  // checkKeyPress(e: any, val: string) {
+  //   if (e.keyCode === 13) {
+  //     this.searchByQuery(val);
+  //   }
+  // }
 
   searchByQuery(val:string) {
     this.fetchByQuery(val);

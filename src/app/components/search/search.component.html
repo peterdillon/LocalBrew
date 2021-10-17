@@ -1,7 +1,7 @@
 <h3>Search By Name Or City:</h3>
 
 <div class="p-inputgroup">
-    <input (keyup)="checkKeyPress($event, query.value)" name="query" #query id="query" autocomplete="off" type="text" pInputText>
+    <input (keyup)="checkKeyInput($event, query.value)" name="query" #query id="query" autocomplete="off" type="text" pInputText>
     <button (click)="searchByQuery(query.value)" type="button" pButton pRipple label="Search"></button>
 </div>
 

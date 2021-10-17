@@ -16,6 +16,7 @@ import { SearchComponent } from './components/search/search.component';
 import { SearchLocationComponent } from './components/search-location/search-location.component';
 import { HomeComponent } from './components/home/home.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { Utils } from './shared/utils';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,9 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     InputTextModule,
     ChipsModule,
     TableModule
+  ],
+  providers: [
+    Utils
   ],
   bootstrap: [AppComponent],
   entryComponents: [SpinnerComponent]

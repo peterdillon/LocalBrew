@@ -48,6 +48,7 @@ export class SearchComponent implements OnInit  {
 
   searchByQuery(val:string) {
     this.fetchByQuery(val);
+    this.noMoreBreweries = false;
   }
   paginationQuery(val:string, pageNumber:number) {
     this.fetchByPage(val, pageNumber);
@@ -83,7 +84,9 @@ export class SearchComponent implements OnInit  {
         this.hasError = true;
         this.showResults = false;
       }
-      
+      // if (this.Breweries?.length <= 4) {
+      //   this.noMoreBreweries = true;
+      // }
     })
   }
 

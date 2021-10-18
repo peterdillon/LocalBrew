@@ -84,9 +84,6 @@ export class SearchComponent implements OnInit  {
         this.hasError = true;
         this.showResults = false;
       }
-      // if (this.Breweries?.length <= 4) {
-      //   this.noMoreBreweries = true;
-      // }
     })
   }
 

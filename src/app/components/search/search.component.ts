@@ -48,7 +48,6 @@ export class SearchComponent implements OnInit  {
 
   searchByQuery(val:string) {
     this.fetchByQuery(val);
-    this.noMoreBreweries = false;
   }
   paginationQuery(val:string, pageNumber:number) {
     this.fetchByPage(val, pageNumber);
@@ -77,6 +76,9 @@ export class SearchComponent implements OnInit  {
     return this.crudService.getBreweryByQuery(query).subscribe((res: {}) => {
       this.Breweries = res;
       this.pageNumber = 1;
+      this.noMoreBreweries = false;
+      this.isNextDisabled = false;
+      this.isPrevDisabled = true;
       if (this.Breweries?.length) {
         this.hasError = false;
         this.showResults = true;

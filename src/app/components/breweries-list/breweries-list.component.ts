@@ -73,5 +73,4 @@ export class BreweriesListComponent implements OnInit {
       this.showResults = true;
     })
   }
-
 }

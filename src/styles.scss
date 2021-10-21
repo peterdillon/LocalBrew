@@ -164,9 +164,7 @@ h3 {
                 letter-spacing: -3px;
                 line-height: 1;
                 padding: 1rem .15rem;
-                font-size: .9rem;
-                color: white;
-            }
+                font-size: .9rem;            }
             &:hover { background-color: rgba(255,255,255,.2); }
             text-decoration: none;
             padding: .75rem;
@@ -196,7 +194,7 @@ html, body {
 }
 .beer-container {
     position: relative;
-    margin: 9rem calc(50% - 11vmin) 0;
+    margin: 7rem calc(50% - 11vmin) 0;
     z-index: 0;
     .beer,
     .bubble,
@@ -394,36 +392,29 @@ html, body {
 // ---------------------------------------------
   footer {
     position: fixed;
-    padding: 1rem;
+    background: $main;
+    bottom: 0;
+    left: 0;
+    padding: .5rem 1rem;
     width: 100%;
     margin: 0 auto;
+    color: mix($main,black,50%);
   }
   footer .foot-content {
     width: 100%;
     margin: 0 auto;
     padding-left: 1rem;
-    color: white;
+    font-size: .9rem;
     // letter-spacing: -2px;
+    font-size: 14px;
     font-family: arial;
     a {
       &:link, &:visited {
-        color: white;
+        text-decoration: none;
+        color: mix($main,black,50%);
       }
       &:hover {
         color: $purple;
       }
     }
-  }
-  
-  footer {
-    background: $main;
-    will-change: bottom, left;
-    bottom: 0;
-    left: 0;
-    padding: 25.6px 0px;
-    padding: 1.6rem 0rem;
-    height: 64px;
-    height: 4rem;
-    font-size: 16px;
-    font-size: 1rem;
   }

@@ -390,3 +390,40 @@ html, body {
     50%  { transform: translateX(-1rem); }
     100%   { transform: translateX(1rem); }
   }
+
+// ---------------------------------------------
+  footer {
+    position: fixed;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer .foot-content {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    color: white;
+    // letter-spacing: -2px;
+    font-family: arial;
+    a {
+      &:link, &:visited {
+        color: white;
+      }
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+  
+  footer {
+    background: $main;
+    will-change: bottom, left;
+    bottom: 0;
+    left: 0;
+    padding: 25.6px 0px;
+    padding: 1.6rem 0rem;
+    height: 64px;
+    height: 4rem;
+    font-size: 16px;
+    font-size: 1rem;
+  }

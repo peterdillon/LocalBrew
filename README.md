@@ -3,7 +3,7 @@
 Using the https://www.openbrewerydb.org/ database endpoints to createa a unique UI for searching local breweries.
 
 # View Live App
-[Heroku App](https://local-brew-finder.herokuapp.com/home)
+[View Live Heroku App](https://local-brew-finder.herokuapp.com/home)
 
 I am using:
 - primeng

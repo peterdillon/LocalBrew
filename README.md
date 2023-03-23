@@ -2,8 +2,6 @@
 
 Using the https://www.openbrewerydb.org/ database endpoints to createa a unique UI for searching local breweries.
 
-# View Live App
-[View Live Heroku App](https://local-brew-finder.herokuapp.com/home)
 
 # Other Details
 I am using:

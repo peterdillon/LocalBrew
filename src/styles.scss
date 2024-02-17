@@ -14,9 +14,9 @@ $red: #f98ca4;
 $blue: #4ad9db;
 // $green: #65f283; original
 $main: #C499AF; // light purple
-$orange: #f5b10b;
+$orange: #e3772f;
 $darkblue: #2f3e9c;
-$darkred: #9e132c;
+$darkred: #663300;
 $purple:#6e1f58;
 $outline: 2px;
 $letter-spacing: -.75rem;
@@ -40,7 +40,7 @@ $letter-spacing: -.75rem;
     text-align: center;
     font-family: 'CoreCircus', sans-serif;
     text-transform: uppercase;
-    color: $red;
+    color: #c06527;
     text-shadow: 
 			-1px -1px 0 $purple, 1px -1px 0 $purple, -1px 1px 0 $purple, 1px 1px 0 $purple, 
 			1px 0px 0px $main, 0px 1px 0px $main, 2px 1px 0px $main, 1px 2px 0px $main, 3px 2px 0px $main, 2px 3px 0px $main, 4px 3px 0px $main, 3px 4px 0px $main, 5px 4px 0px $main,
@@ -85,8 +85,11 @@ $letter-spacing: -.75rem;
 
 .error {letter-spacing: -.1rem; text-shadow: 1px 1px 3px #333;}
 td.last, th.last { text-align: center !important;}
+td span a { color: #666; }
+td a span { color: #666; }
+
 #spinner { background-color: $main !important;}
-a { color: mix($main,black,50%); }
+a { color: white; }
 h1, h3, p, label {
     color: whitesmoke;
     font-family: 'CoreCircus', Arial, Helvetica, sans-serif;
@@ -114,16 +117,16 @@ h3 {
     button {
       background-color: transparent;
       text-align: center;
-      border: 1px solid mix($main,black,50%);
+      border: 1px solid white;
       padding: .75rem;
       display: block;
-      color: mix($main,black,50%);
+      color: white;
       font-family: 'CoreCircus', Arial, Helvetica, sans-serif;
       font-size: .9rem;
       &:hover { background-color: rgba(255,255,255,.2); }
       &:disabled {
         &:hover { background-color: transparent }
-        color: rgba(#624d58,.4);
+        color: rgba(#ccc,.5);
         cursor: not-allowed;
       }
       &.no-rt-bor {  
@@ -139,7 +142,7 @@ h3 {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    border: 1px solid mix($main,black,50%);
+    border: 1px solid white;
     .menu-item {
         display: flex;
         flex-direction: column;
@@ -149,7 +152,7 @@ h3 {
         text-overflow: ellipsis;
         text-align: center;
         cursor: pointer;
-        border-right: 1px solid mix($main,black,50%);
+        border-right: 1px solid white;
       &:last-of-type {
         border-right: transparent;
       }
@@ -169,7 +172,7 @@ h3 {
             text-decoration: none;
             padding: .75rem;
             display: block;
-            color: mix($main,black,50%);
+            color: white;
             font-family: 'CoreCircus', Arial, Helvetica, sans-serif;
         }
     }
@@ -181,7 +184,10 @@ html, body {
     margin: 0;
 	width: 100%;
 	height: 100%;
-	background:linear-gradient(10deg, rgba(244,235,160,1) 50%,rgba(196,153,175,1) 43%);
+//   $orange: #f5b10b;
+// $darkblue: #2f3e9c;
+// $darkred: #9e132c;
+	background:linear-gradient(10deg, $orange 50%, $darkred 43%);
 }
 .page-container {
     padding: .5rem;
@@ -240,7 +246,7 @@ html, body {
     height: 13vmin;
     top: 8vmin;
     left: 13vmin;
-    background-color: #C499AF;
+    background-color: $darkred;
     border-radius: 19%;
   }
   
@@ -392,13 +398,13 @@ html, body {
 // ---------------------------------------------
   footer {
     position: fixed;
-    background: $main;
+    background: $darkred;
     bottom: 0;
     left: 0;
     padding: .5rem 1rem;
     width: 100%;
     margin: 0 auto;
-    color: mix($main,black,50%);
+    color: white;
   }
   footer .foot-content {
     width: 100%;
@@ -411,7 +417,7 @@ html, body {
     a {
       &:link, &:visited {
         text-decoration: none;
-        color: mix($main,black,50%);
+        color: white;
       }
       &:hover {
         color: $purple;

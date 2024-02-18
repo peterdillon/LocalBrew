@@ -10,16 +10,18 @@
                 url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') 
             format('truetype');
 }
+// Variables --------------
 $red: #f98ca4;
 $blue: #4ad9db;
-// $green: #65f283; original
-$main: #C499AF; // light purple
+$main: #C499AF;
 $orange: #e3772f;
 $darkblue: #2f3e9c;
 $darkred: #663300;
 $purple:#6e1f58;
 $outline: 2px;
 $letter-spacing: -.75rem;
+// -------------------------
+
 .logo {
     @media screen and (max-width: 400px) {
         font-size: 20vmin;
@@ -185,7 +187,6 @@ h3 {
     }
 }
 //-------------------------------------------
-//-------------------------------------------
 html, body {
   padding: 0;
   margin: 0;
@@ -198,7 +199,6 @@ html, body {
     position: absolute;
     width: 100%;
 }
-
 app-home {
   display: grid;
   height: calc(100vh - 1rem);
@@ -230,208 +230,206 @@ app-home {
     .small-bubbles {
       border-radius: 100%;
     }
-  }
-  .mug {
-    position: relative;
-    width: 20vmin;
-    height: 32vmin;
-    background-color: #EEF5F8;
-    border-radius: 2vmin;
-  }
-  .mug:before, .mug:after {
-    position: absolute;
-    content: "";
-  }
-  .mug:before {
-    z-index: -2;
-    left: 12vmin;
-    top: 6vmin;
-    width: 15vmin;
-    height: 17vmin;
-    border-radius: 19%;
-    background-color: #EEF5F8;
-  }
-  .mug:after {
-    z-index: -1;
-    width: 12vmin;
-    height: 13vmin;
-    top: 8vmin;
-    left: 13vmin;
-    background-color: $darkred;
-    border-radius: 19%;
-  }
-  
-  .beer {
-    top: 2vmin;
-    left: 2vmin;
-    width: 16vmin;
-    height: 28vmin;
-    background-color: #FFD36D;
-    border-radius: 1vmin;
-  }
-  .beer:before, .beer:after {
-    position: absolute;
-    content: "";
-    background-color: white;
-    border-radius: 100%;
-  }
-  .beer:before {
-    animation: 4.5s up infinite;
-    // animation-delay: 2s;
-    width: 1.5vmin;
-    height: 1.5vmin;
-    bottom: 2vmin;
-    left: 4vmin;
-    box-shadow: 7vmin -15vmin 0 white, 4vmin -10vmin 0 white, 6vmin -3vmin 0 white;
-  }
-  .beer:after {
-    animation: 3.5s up infinite;
-    opacity: 0;
-    animation-delay: 1s;
-    width: 1.5vmin;
-    height: 1.5vmin;
-    bottom: 6vmin;
-    left: 5vmin;
-    box-shadow: -3vmin -8vmin 0 white, 7vmin -5vmin 0 white;
-  }
-  
-  .bubble {
-    width: 10vmin;
-    height: 10vmin;
-    top: -5vmin;
-    left: -3vmin;
-  }
-  .bubble:before, .bubble:after {
-    position: absolute;
-    content: "";
-    background-color: white;
-    border-radius: 100%;
-  }
-  .bubble:before {
-    width: 12vmin;
-    height: 12vmin;
-    left: 5vmin;
-    top: -2vmin;
-  }
-  .bubble:after {
-    width: 10vmin;
-    height: 10vmin;
-    left: 14vmin;
-    top: 0vmin;
-  }
-  
-  .small-bubbles {
-    width: 5vmin;
-    height: 5vmin;
-    top: -7vmin;
-    left: 11vmin;
-  }
-  .small-bubbles:before, .small-bubbles:after {
-    position: absolute;
-    content: "";
-    border-radius: 100%;
-    background-color: white;
-  }
-  .small-bubbles:before {
-    width: 3vmin;
-    height: 3vmin;
-    top: -6vmin;
-    left: -3vmin;
-  }
-  .small-bubbles:after {
-    width: 3vmin;
-    height: 3vmin;
-    top: -8vmin;
-    left: -8vmin;
-  }
-  
-  .drip {
-    width: 5vmin;
-    height: 14vmin;
-    top: 1vmin;
-    border-radius: 100px;
-    left: -2vmin;
-    box-shadow: 4vmin -6vmin 0 white;
-    animation: 6s drip infinite;
-  }
-  
-  @keyframes up {
-    0% {
-      transform: translateY(0px);
-      opacity: 0;
-    }
-    20% {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    90% {
-        opacity: .5;
-    }
-    100% {
-      transform: translateY(-15rem);
-      opacity: 0;
-    }
-  }
-  @keyframes drip {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      height: 20vmin;
-    }
-    99% {
-      transform: translateY(0px);
-    }
-  }
+}
+.mug {
+  position: relative;
+  width: 20vmin;
+  height: 32vmin;
+  background-color: #EEF5F8;
+  border-radius: 2vmin;
+}
+.mug:before, .mug:after {
+  position: absolute;
+  content: "";
+}
+.mug:before {
+  z-index: -2;
+  left: 12vmin;
+  top: 6vmin;
+  width: 15vmin;
+  height: 17vmin;
+  border-radius: 19%;
+  background-color: #EEF5F8;
+}
+.mug:after {
+  z-index: -1;
+  width: 12vmin;
+  height: 13vmin;
+  top: 8vmin;
+  left: 13vmin;
+  background-color: $darkred;
+  border-radius: 19%;
+}
+.beer {
+  top: 2vmin;
+  left: 2vmin;
+  width: 16vmin;
+  height: 28vmin;
+  background-color: #FFD36D;
+  border-radius: 1vmin;
+}
+.beer:before, .beer:after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 100%;
+}
+.beer:before {
+  animation: 4.5s up infinite;
+  // animation-delay: 2s;
+  width: 1.5vmin;
+  height: 1.5vmin;
+  bottom: 2vmin;
+  left: 4vmin;
+  box-shadow: 7vmin -15vmin 0 white, 4vmin -10vmin 0 white, 6vmin -3vmin 0 white;
+}
+.beer:after {
+  animation: 3.5s up infinite;
+  opacity: 0;
+  animation-delay: 1s;
+  width: 1.5vmin;
+  height: 1.5vmin;
+  bottom: 6vmin;
+  left: 5vmin;
+  box-shadow: -3vmin -8vmin 0 white, 7vmin -5vmin 0 white;
+}
 
-  .position-ct {
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
-    background-color: rgba(255,255,255,20%);
-    p {
-      padding: 0;
-      margin: 0;
-    }
+.bubble {
+  width: 10vmin;
+  height: 10vmin;
+  top: -5vmin;
+  left: -3vmin;
+}
+.bubble:before, .bubble:after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 100%;
+}
+.bubble:before {
+  width: 12vmin;
+  height: 12vmin;
+  left: 5vmin;
+  top: -2vmin;
+}
+.bubble:after {
+  width: 10vmin;
+  height: 10vmin;
+  left: 14vmin;
+  top: 0vmin;
+}
+
+.small-bubbles {
+  width: 5vmin;
+  height: 5vmin;
+  top: -7vmin;
+  left: 11vmin;
+}
+.small-bubbles:before, .small-bubbles:after {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: white;
+}
+.small-bubbles:before {
+  width: 3vmin;
+  height: 3vmin;
+  top: -6vmin;
+  left: -3vmin;
+}
+.small-bubbles:after {
+  width: 3vmin;
+  height: 3vmin;
+  top: -8vmin;
+  left: -8vmin;
+}
+
+.drip {
+  width: 5vmin;
+  height: 14vmin;
+  top: 1vmin;
+  border-radius: 100px;
+  left: -2vmin;
+  box-shadow: 4vmin -6vmin 0 white;
+  animation: 6s drip infinite;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
   }
-  .gettingPosition {
-    animation: moveAndOpacity 2s ease-in-out infinite;
+  20% {
+    transform: translateY(0px);
+    opacity: 1;
   }
-  @keyframes moveAndOpacity {
-    0%   { transform: translateX(1rem); }
-    50%  { transform: translateX(-1rem); }
-    100%   { transform: translateX(1rem); }
+  80% {
+      opacity: 1;
   }
+  90% {
+      opacity: .5;
+  }
+  100% {
+    transform: translateY(-15rem);
+    opacity: 0;
+  }
+}
+@keyframes drip {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    height: 20vmin;
+  }
+  99% {
+    transform: translateY(0px);
+  }
+}
+
+.position-ct {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(255,255,255,20%);
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+.gettingPosition {
+  animation: moveAndOpacity 2s ease-in-out infinite;
+}
+@keyframes moveAndOpacity {
+  0%   { transform: translateX(1rem); }
+  50%  { transform: translateX(-1rem); }
+  100%   { transform: translateX(1rem); }
+}
 
 // ---------------------------------------------
-  footer {
-    position: fixed;
-    background: $darkred;
-    bottom: 0;
-    left: 0;
-    padding: .5rem 1rem;
-    width: 100%;
-    margin: 0 auto;
-    color: white;
-  }
-  footer .foot-content {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 1rem;
-    font-size: .9rem;
-    // letter-spacing: -2px;
-    font-size: 14px;
-    font-family: arial;
-    a {
-      &:link, &:visited {
-        text-decoration: none;
-        color: white;
-      }
-      &:hover {
-        color: $purple;
-      }
+footer {
+  position: fixed;
+  background: $darkred;
+  bottom: 0;
+  left: 0;
+  padding: .5rem 1rem;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+}
+footer .foot-content {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  font-size: .9rem;
+  font-size: 14px;
+  font-family: arial;
+  a {
+    &:link, &:visited {
+      text-decoration: none;
+      color: white;
+    }
+    &:hover {
+      color: $purple;
     }
   }
+}

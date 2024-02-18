@@ -14,7 +14,7 @@ export class Brewery {
   providedIn: 'root'
 })
 
-export class CrudService {
+export class BreweryService {
 
   // REST API
   // endpoint = 'http://localhost:3000';
@@ -31,7 +31,7 @@ export class CrudService {
   }  
 
   getBreweries(): Observable<Brewery> {
-    return this.httpClient.get<Brewery>(this.endpoint + '/breweries?per_page=5')
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries?per_page=10')
     .pipe(
       retry(1),
       catchError(this.processError)
@@ -39,7 +39,7 @@ export class CrudService {
   }
 
   getBreweryByPage(query: any, pageNumber: any): Observable<Brewery> {
-    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&page=' + pageNumber + '&per_page=5')
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&page=' + pageNumber + '&per_page=10')
     .pipe(
       retry(1),
       catchError(this.processError)
@@ -47,7 +47,7 @@ export class CrudService {
   }
 
   getBreweryByPageOnly(pageNumber: any): Observable<Brewery> {
-    return this.httpClient.get<Brewery>(this.endpoint + '/breweries?&page=' + pageNumber + '&per_page=5')
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries?&page=' + pageNumber + '&per_page=10')
     .pipe(
       retry(1),
       catchError(this.processError)
@@ -55,7 +55,7 @@ export class CrudService {
   }
 
   getBreweryByQuery(query: any): Observable<Brewery> {
-    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&per_page=5')
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/search?query=' + query + '&per_page=10')
     .pipe(
       retry(1),
       catchError(this.processError)
@@ -63,7 +63,7 @@ export class CrudService {
   }
 
   getBreweryByLocation(latitude: any, longitude: any, pageNumber: any): Observable<Brewery> {
-    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/?by_dist=' + latitude + ',' + longitude + '&page=' + pageNumber + '&per_page=5')
+    return this.httpClient.get<Brewery>(this.endpoint + '/breweries/?by_dist=' + latitude + ',' + longitude + '&page=' + pageNumber + '&per_page=10')
     .pipe(
       retry(1),
       catchError(this.processError)

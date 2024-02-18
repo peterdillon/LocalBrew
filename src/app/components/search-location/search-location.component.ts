@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CrudService } from "../../shared/crud.service";
+import { BreweryService } from "../../shared/brewery.service";
 import { GeolocationService } from '@ng-web-apis/geolocation';
 import { take } from 'rxjs/operators';
 
@@ -24,7 +24,7 @@ export class SearchLocationComponent implements OnInit  {
   locationError: boolean = false;
 
   constructor( 
-    public crudService: CrudService,
+    public breweryService: BreweryService,
     private readonly geolocation$: GeolocationService ) {}
 
   ngOnInit(): void {
@@ -63,7 +63,7 @@ export class SearchLocationComponent implements OnInit  {
 
   // Service calls  
   getByLocation(latitude: any, longitude: any, pageNumber: any) {
-    return this.crudService.getBreweryByLocation(latitude, longitude, pageNumber).subscribe((res: {}) => {
+    return this.breweryService.getBreweryByLocation(latitude, longitude, pageNumber).subscribe((res: {}) => {
       this.Breweries = res;
       if (this.Breweries?.length) {
         this.hasError = false;

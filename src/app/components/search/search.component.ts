@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CrudService } from "../../shared/crud.service";
+import { BreweryService } from "../../shared/brewery.service";
 import { Utils } from '../../shared/utils';
 
 @Component({
@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit  {
   noMoreBreweries: boolean = false;
   resultsTotal: number = 0;
 
-  constructor( public crudService: CrudService,
+  constructor( public breweryService: BreweryService,
                private utils: Utils ) {}
 
   ngOnInit(): void { }
@@ -55,7 +55,7 @@ export class SearchComponent implements OnInit  {
 
   // Service calls
   fetchByPage(query: string, pageNumber: number) {
-    return this.crudService.getBreweryByPage(query, pageNumber).subscribe((res: {}) => {
+    return this.breweryService.getBreweryByPage(query, pageNumber).subscribe((res: {}) => {
       this.Breweries = res;
       if (this.Breweries?.length) {
         this.hasError = false;
@@ -73,7 +73,7 @@ export class SearchComponent implements OnInit  {
   }
   
   fetchByQuery(query: string) {
-    return this.crudService.getBreweryByQuery(query).subscribe((res: {}) => {
+    return this.breweryService.getBreweryByQuery(query).subscribe((res: {}) => {
       this.Breweries = res;
       this.pageNumber = 1;
       this.noMoreBreweries = false;

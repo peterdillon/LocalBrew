@@ -4,7 +4,7 @@ Using the https://www.openbrewerydb.org/ database endpoints to createa a unique 
 
 
 # Other Details
-I am using:
+The app uses:
 - primeng
 - @ng-web-apis/geolocation
 - ng-http-loader

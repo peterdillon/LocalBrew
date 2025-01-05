@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "localbrew-f26a9"
-  }
+  },
+  "targets": {
+    "localbrew-f26a9": {
+      "hosting": {
+        "localbrew-f26a9": [
+          "public"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

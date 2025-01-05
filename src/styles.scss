@@ -152,6 +152,8 @@ h3 {
     justify-content: center;
     flex-direction: row;
     border: 1px solid white;
+    position: relative;
+    z-index: 1;
     .menu-item {
         display: flex;
         flex-direction: column;

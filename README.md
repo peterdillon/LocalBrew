@@ -2,6 +2,10 @@
 
 Using the https://www.openbrewerydb.org/ database endpoints to createa a unique UI for searching local breweries.
 
+# If you see ERRORS like code: 'ERR_OSSL_EVP_UNSUPPORTED'
+check version of node (current build uses 20.11.1)
+run: export NODE_OPTIONS=--openssl-legacy-provider
+then: ng serve
 
 # Other Details
 The app uses:

@@ -20,7 +20,7 @@ export class BreweryService {
   // endpoint = 'http://localhost:3000';
   // endpoint = 'https://jsonplaceholder.typicode.com';
 
-  endpoint = 'https://api.openbrewerydb.org';
+  endpoint = 'https://api.openbrewerydb.org/v1';
 
   constructor(private httpClient: HttpClient) { }
 

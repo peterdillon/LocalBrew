@@ -5,8 +5,8 @@ Using the https://www.openbrewerydb.org/ database endpoints to createa a unique 
 # If you see ERRORS:
 such as: 'ERR_OSSL_EVP_UNSUPPORTED'
 check version of node (current build uses 20.11.1)
-run: export NODE_OPTIONS=--openssl-legacy-provider
-then: ng serve
+$export NODE_OPTIONS=--openssl-legacy-provider
+$ng serve
 
 # Other Details
 The app uses:
